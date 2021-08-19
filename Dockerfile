@@ -1,5 +1,3 @@
-FROM nginx
-WORKDIR /usr/share/nginx/html
-COPY index.html .
+FROM nginx:alpine
+COPY . /index.html/ /usr/share/nginx/html
 EXPOSE 80
-CMD ["html","index.html"]
