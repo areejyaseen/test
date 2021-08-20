@@ -1,7 +1,3 @@
-FROM ubuntu:latest
-RUN apt-get update -y
-RUN apt-get install tzdata
-RUN apt-get install apache2 -y
-COPY . /var/www/html
+FROM nginx:alpine
+COPY . /index.html/ /usr/share/nginx/html
 EXPOSE 80
-ENTRYPOINT apachectl -D FOREGROUND
